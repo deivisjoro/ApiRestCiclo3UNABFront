@@ -1,0 +1,69 @@
+<div class="contenedor">
+
+    <div class="contenido2">
+
+        <div class="card">
+
+            <div *ngIf="partido.id==0">
+                <div class="centrar">
+                    Cargando datos del partido
+                </div>
+            </div>
+            
+            <div *ngIf="partido.id!=0">
+
+                <div class="card-header">
+                    <h3>ACTUALIZAR MARCADOR</h3>
+                </div>
+
+                <div class="card-body">                    
+                    
+                    <div class="card-body-columna">
+
+                        <div class="columna">
+                            <h3 class="centrar">Equipo Local</h3>
+                            <div class="centrar">
+                                {{ partido.localNombre }}
+                            </div>
+                        </div>
+
+                        <div class="columna">
+                            <h3 class="centrar">Equipo Visitante</h3>
+                            <div class="centrar">
+                                {{ partido.visitanteNombre }}
+                            </div>
+                        </div>    
+
+                    </div> 
+                    <div class="card-body-columna">
+                        <div class="columna2">
+                            <input type="text" name="goles_local" id="goles_local" class="input-goles" value="{{ partido.golesLocal }}" #goles_local> 
+                        </div>
+                        <div class="columna2">
+                            <input type="text" name="goles_visitante" id="goles_visitante" class="input-goles" #goles_visitante value="{{ partido.golesVisitante }}">
+                        </div>
+                    </div>
+                    <div class="card-body-columna">
+                        <strong>Fecha del partido:</strong>&nbsp; {{ partido.fecha }}
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-guardar" (click)="actualizarPartido(goles_local.value, goles_visitante.value)">
+                        Actualizar
+                    </button>
+                    <button type="button" class="btn btn-error btn-guardar" (click)="regresar()">
+                        Cancelar
+                    </button>
+            </div>
+
+        </div>
+
+        <div *ngIf="error" class="error-registro">
+            Error al actualizar el marcador
+        </div>      
+
+    </div>
+
+</div>

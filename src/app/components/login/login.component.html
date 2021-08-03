@@ -1,0 +1,46 @@
+<div class="contenedor">
+
+    <div class="contenido">
+
+        <form action="" [formGroup]="formulario" (ngSubmit)="verificarDatos()" autocomplete="off">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h3>Control de Acceso</h3>
+                </div>
+
+                <div class="card-body">                
+                
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" class="form-control" formControlName="username"
+                        [class.is-invalid]="usernameNoValido">
+                        <small *ngIf="usernameNoValido" class="text-danger">Debe ingresar un nombre de usuario</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" class="form-control" formControlName="password"
+                        [class.is-invalid]="passwordNoValido">
+                        <small *ngIf="passwordNoValido" class="text-danger">Debe ingresar una contraseña</small>
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-guardar">
+                        Entrar
+                    </button>
+                </div>
+
+            </div>
+        </form>
+
+        <div *ngIf="error" class="error-login">
+            Los datos ingresados son incorrectos
+        </div>
+
+    </div>
+
+</div>

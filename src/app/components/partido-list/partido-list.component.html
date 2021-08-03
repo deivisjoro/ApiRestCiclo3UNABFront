@@ -1,0 +1,60 @@
+<div class="contenedor">
+
+    <div class="contenido2">
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Listado de Partidos</h3>
+            </div>
+
+            <div class="card-body">                
+               
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Fecha</th>
+                            <th>Local</th>
+                            <th class="centrar">Goles Local</th>
+                            <th class="centrar">Goles Visitanre</th>
+                            <th>Visitante</th>
+                            <th>Usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr *ngFor="let partido of partidos; let i = index">
+                            <td>{{ (i+1) }}</td>
+                            <td>{{ partido.fecha }}</td>
+                            <td>{{ partido.localNombre }}</td>
+                            <td class="centrar">{{ partido.golesLocal }}</td>
+                            <td class="centrar">{{ partido.golesVisitante }}</td>
+                            <td>{{ partido.visitanteNombre }}</td>
+                            <td>{{ partido.usuarioNombre }}</td>
+                            <td>
+                                <div *ngIf="usuario.id==partido.usuario">
+                                    <a [routerLink]="['/partidos-editar', partido.id]">
+                                        Actualizar Marcador
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+       
+
+    </div>
+
+</div>
+

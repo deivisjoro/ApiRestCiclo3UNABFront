@@ -1,0 +1,134 @@
+.contenedor-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-login .contenido{
+    width: 60%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-header{
+    border-radius: .25rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: var(--color-principal);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header h3{
+    color: #fff;
+}
+
+.card-body{
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-footer{
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    font-weight: bold;
+}
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-guardar{
+    width: 100%;
+}
+
+.alert-info{
+
+    margin-top: 20px;
+
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}
+
+.error-registro{
+    margin-top: 20px;
+
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}

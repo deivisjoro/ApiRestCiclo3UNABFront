@@ -1,0 +1,48 @@
+<div class="contenedor">
+
+    <div class="contenido">
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Registrar Partido</h3>
+            </div>
+
+            <div class="card-body">                
+               
+                <div class="form-group">
+                    <label for="local">Equipo Local:</label>
+                    <select name="local" id="local" #local class="form-control">
+                        <option value="{{ equipo.id }}" *ngFor="let equipo of equipos">{{ equipo.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitante">Equipo Visitante:</label>
+                    <select name="visitante" id="visitante" #visitante class="form-control">
+                        <option value="{{ equipo.id }}" *ngFor="let equipo of equipos; let i = index">{{ equipo.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" name="fecha" id="fecha" class="form-control" #fecha>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-guardar" (click)="registrarPartido(local.value, visitante.value, fecha.value)">
+                    Registrar
+                </button>
+            </div>
+
+        </div>
+
+        <div *ngIf="error" class="error-login">
+            Los datos ingresados son incorrectos
+        </div>
+
+    </div>
+
+</div>

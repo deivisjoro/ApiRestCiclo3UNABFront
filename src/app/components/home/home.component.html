@@ -1,0 +1,27 @@
+<div class="div-home">
+    <h3>Bienvenido a la aplicacion de registro y consulta de partidos</h3>
+   
+    <div *ngIf="sesionService.usuario.id==0">
+        <ul>
+            <li>
+                Debes iniciar sesion o registrarte
+            </li>
+        </ul>
+    
+    </div>
+   
+    <div *ngIf="sesionService.usuario.id!=0">
+    
+        <ul>
+    
+            <li>Ya puedes ver los partidos registrados en el nuestra base de datos.</li>
+    
+            <li>Tambien puedes registrar la informacion de otros partidos</li>
+    
+            <li>Utiliza el menu superior</li>
+    
+        </ul>
+        
+    
+    </div>
+</div>
